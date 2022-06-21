@@ -1,4 +1,6 @@
 # App-Layer-Protocol-Demo
+This project simulates the app-layer over udp.
+
 Code Design-Methods/Functions
 Client.java
 
