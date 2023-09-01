@@ -34,7 +34,7 @@ Algorithm-Integration of Client and Server
 Handling missing packets: In the case of retransmissions, it is implemented by counting the number of loops where the needed message is not received Using boolean variable SEND and integer variable SENDWAIT. Whenever a packet is sent from the client/server, a loop runs and the value of the SENDWAIT is incremented if the server/client had not received it. The packet is then resent to the client/server until the SENDWAIT had reached an upper bound..
 Error handling
 
-For this program, we used to try and catch blocks to catch common errors which occur when the server and client communicate with each other.
+For this program, try and catch blocks were used to catch common errors which occur when the server and client communicate with each other.
 
 The following exceptions used are:
 IOException: Catches failed or interrupted I/O operations
