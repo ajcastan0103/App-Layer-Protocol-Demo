@@ -1,7 +1,7 @@
 # App-Layer-Protocol-Demo
 This project simulates the app-layer over udp.
 
-<b>Code Design-Methods/Functions</b> <br />
+Code Design-Methods/Functions <br />
 
 <u>Client.java</u> <br />
 ● public static void main(String args[]) throws IOException, SocketException::Main method. It is used to call all other methods/functions and to close the socket.<br />
@@ -10,6 +10,7 @@ This project simulates the app-layer over udp.
 ● public static void send(String msg) throws IOException: Method to create and sent data packet <br />
 ● public static void rec() throws IOException: Method to receive a data packet from the server.  <br />
 ● public static StringBuilder data(byte[] a): Method to convert received bytes from the server into a string. <br /> <br />
+
 <u>Server.java</u> <br />
 ● public static void main(String[] args) throws IOException, SocketException:Main method. It is used to call all other methods/functions and to close the socket.<br />
 ● public static void fin_packet() throws IOException: Method when all data chunks are sent to make FIN packet message.<br />
