@@ -1,16 +1,16 @@
 # App-Layer-Protocol-Demo
 This project simulates the app-layer over udp.
 
-<b>Code Design-Methods/Functions<b> <br />
+<b>Code Design-Methods/Functions</b> <br />
 
-<u>Client.java<u> <br />
+<u>Client.java</u> <br />
 ● public static void main(String args[]) throws IOException, SocketException::Main method. It is used to call all other methods/functions and to close the socket.<br />
 ● public static String get_seq(): Method to get seq number that was received from server <br />
 ● public static void flip_seq(): Method to alternate between seq numbers 0 and 1  <br />
 ● public static void send(String msg) throws IOException: Method to create and sent data packet <br />
 ● public static void rec() throws IOException: Method to receive a data packet from the server.  <br />
 ● public static StringBuilder data(byte[] a): Method to convert received bytes from the server into a string. <br /> <br />
-<u>Server.java<u> <br />
+<u>Server.java</u> <br />
 ● public static void main(String[] args) throws IOException, SocketException:Main method. It is used to call all other methods/functions and to close the socket.<br />
 ● public static void fin_packet() throws IOException: Method when all data chunks are sent to make FIN packet message.<br />
 ● public static void send_chunks() throws IOException: Method used to send data chunks to the Client<br />
@@ -24,7 +24,7 @@ This project simulates the app-layer over udp.
 
 
 
-<b>Algorithm-Integration of Client and Server<b>
+<b>Algorithm-Integration of Client and Server</b>
 1) Threeway Handshake: The client and server establish a threeway handshake using the method handshake_check(), if they had not done so already. It sends boolean variables which were made for each type of component of the threeway handshake (SYN, ACK, SYNACK). During the client-server interaction, if each represented message had been sent/received between the client/server, these variables had been set to true. Once they all had been set to true, the threeway handshake was made. Otherwise, an exception was thrown.
 
 2) Request From the client: Once the three-way handshake had been established, the client will send the “REQ” message to the server. The server will then verify if it had been received. If so, the process of sending the bytes will then begin. Otherwise, the appropriate exception was thrown.
