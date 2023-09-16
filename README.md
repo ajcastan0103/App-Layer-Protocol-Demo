@@ -1,26 +1,26 @@
 # App-Layer-Protocol-Demo
 This project simulates the app-layer over udp.
 
-<b>Code Design-Methods/Functions<b> </ br>
+<b>Code Design-Methods/Functions<b> <br />
 
-<u>Client.java<u> </ br>
-● public static void main(String args[]) throws IOException, SocketException::Main method. It is used to call all other methods/functions and to close the socket.
-● public static String get_seq(): Method to get seq number that was received from server 
-● public static void flip_seq(): Method to alternate between seq numbers 0 and 1  
-● public static void send(String msg) throws IOException: Method to create and sent data packet 
-● public static void rec() throws IOException: Method to receive a data packet from the server.  
-● public static StringBuilder data(byte[] a): Method to convert received bytes from the server into a string. </ br>
-<u>Server.java<u> </ br>
-● public static void main(String[] args) throws IOException, SocketException:Main method. It is used to call all other methods/functions and to close the socket.
-● public static void fin_packet() throws IOException: Method when all data chunks are sent to make FIN packet message.
-● public static void send_chunks() throws IOException: Method used to send data chunks to the Client
-● public static String get_seq(): Method to get sequence number
-● public static void flip_seq(): Method to alternate between seq numbers 0 and 1
-● public static void rec() throws IOException: Method to receive message sent from the client.
-● public static void send(String msg) throws IOException: Method to create message, which will be sent in chucks of packets to the client.
-● public static String[] generate_chunks() 
-● public static void handshake_check() throws IOException: Interact with server and verify if a handshake has been made.
-● public static StringBuilder data(byte[] a): Method to convert received bytesfrom client into a string.
+<u>Client.java<u> <br />
+● public static void main(String args[]) throws IOException, SocketException::Main method. It is used to call all other methods/functions and to close the socket.<br />
+● public static String get_seq(): Method to get seq number that was received from server <br />
+● public static void flip_seq(): Method to alternate between seq numbers 0 and 1  <br />
+● public static void send(String msg) throws IOException: Method to create and sent data packet <br />
+● public static void rec() throws IOException: Method to receive a data packet from the server.  <br />
+● public static StringBuilder data(byte[] a): Method to convert received bytes from the server into a string. <br /> <br />
+<u>Server.java<u> <br />
+● public static void main(String[] args) throws IOException, SocketException:Main method. It is used to call all other methods/functions and to close the socket.<br />
+● public static void fin_packet() throws IOException: Method when all data chunks are sent to make FIN packet message.<br />
+● public static void send_chunks() throws IOException: Method used to send data chunks to the Client<br />
+● public static String get_seq(): Method to get sequence number<br />
+● public static void flip_seq(): Method to alternate between seq numbers 0 and 1<br />
+● public static void rec() throws IOException: Method to receive message sent from the client.<br />
+● public static void send(String msg) throws IOException: Method to create message, which will be sent in chucks of packets to the client.<br />
+● public static String[] generate_chunks() <br />
+● public static void handshake_check() throws IOException: Interact with server and verify if a handshake has been made.<br />
+● public static StringBuilder data(byte[] a): Method to convert received bytesfrom client into a string.<br />
 
 
 
